@@ -2,11 +2,13 @@
 variable "aws_access_key" {
         type = string
         description = "Access key to AWS console"
+        sensitive = true
 }
 
 variable "aws_secret_key" {
         type = string
         description = "Secret key to AWS console"
+        sensitive = true
 }
 
 variable "aws_region" {
@@ -42,6 +44,7 @@ variable "ami_id" {
 variable "ami_key_pair_name" {
         type = string
         default = "satisfactory"
+        sensitive = true
 }
 
 variable "domain" {
@@ -52,14 +55,17 @@ variable "domain" {
 variable "discord_webhook_url" {
         type = string
         description = "webhook URL in the form of https://discord.com/api/webhooks/..."
+        sensitive = true
 }
 
 variable "cloudflare_api_token" {
         type = string
         description = "api token with permissions"
+        sensitive = true
 }
 
 variable "cloudflare_account_id" {
         type = string
         description = "Account ID for this zone"
+        sensitive = true
 }
