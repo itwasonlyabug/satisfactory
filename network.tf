@@ -10,10 +10,6 @@ data "http" "icanhazip" {
   url = "http://icanhazip.com"
 }
 
-output "host_ip" {
-  value = chomp(data.http.icanhazip.response_body)
-}
-
 resource "aws_vpc" "satisfactory" {
   cidr_block       = "10.69.0.0/16"
   instance_tenancy = "default"
